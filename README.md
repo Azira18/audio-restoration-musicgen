@@ -28,7 +28,7 @@ The pipeline is structured as follows:
 - Analyzes the results.
 
 ## Usage
-- All files can be saved and run on **Google Colab** to listen to the processed audio tracks.
+- All files can be saved and run on **Google Colab** to listen to the processed audio tracks (they will be saved on your Google Drive).
 
 ## References
 
