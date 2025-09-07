@@ -29,3 +29,11 @@ The pipeline is structured as follows:
 
 ## Usage
 - All files can be saved and run on **Google Colab** to listen to the processed audio tracks.
+
+## References
+
+- [MusicGen GitHub](https://github.com/facebookresearch/audiocraft)
+- [Demucs: Source Separation](https://github.com/facebookresearch/demucs)
+- [noisereduce Python library](https://github.com/timsainb/noisereduce)
+- [DNSMOS: Deep Noise Suppression MOS](https://github.com/microsoft/DNS-Challenge)
+
