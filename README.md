@@ -1,11 +1,31 @@
-# audio-restoration-musicgen
-This repository contains a machine learning pipeline for audio restoration, designed to enhance the technical and perceptual quality of outputs from the MusicGen generative model.
+# Audio Restoration Pipeline for MusicGen
 
-Here’s how I structured the pipeline:
-- 01_Generate_Audio: I used the MusicGen model to generate n audio files from n prompts randomly selected from a list of 50.
-- 02_Source_Separation: I applied the Demucs model to separate each audio file into six stems: drums, bass, other, vocals, guitar, and piano.
-- 03_Stems_Denoising (available only in .py format): I used the noisereduce model to clean each individual stem. Denoising can be performed either by providing a noise_clip along with the stem to be cleaned (I used the vocals as the noise_clip, since they contain the most noise) or by providing only the stem to the model.
-- 03_Stems_Analysis: I compared waveforms and spectrograms of each stem and used DNSMOS to evaluate audio quality.
-- 04_Reconstruction_and_Analysis: I reconstructed the audio by summing all the cleaned stems (excluding vocals) and analyzed the results.
+This repository contains a machine learning pipeline for **audio restoration**, designed to enhance the technical and perceptual quality of outputs from the MusicGen generative model.
 
-It is possible to save the files and run them on Google Colab to listen to all the audio tracks.
+## Pipeline Overview
+
+The pipeline is structured as follows:
+
+### 01_Generate_Audio
+- Generates `n` audio files from randomly selected prompts from a list of 50.
+- Uses the MusicGen model.
+
+### 02_Source_Separation
+- Applies the Demucs model to separate each audio file into six stems: drums, bass, other, vocals, guitar, and piano.
+
+### 03_Stems_Denoising (`.py` only)
+- Cleans each individual stem using the `noisereduce` model.
+- Denoising can be performed by:
+  1. Providing a `noise_clip` along with the stem (I used the vocals as the `noise_clip` because they contain the most noise), or  
+  2. Providing only the stem.
+
+### 03_Stems_Analysis
+- Compares waveforms and spectrograms of each stem.
+- Evaluates audio quality using DNSMOS.
+
+### 04_Reconstruction_and_Analysis
+- Reconstructs the audio by summing all cleaned stems (excluding vocals).
+- Analyzes the results.
+
+## Usage
+- All files can be saved and run on **Google Colab** to listen to the processed audio tracks.
