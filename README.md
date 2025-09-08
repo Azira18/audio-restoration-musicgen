@@ -2,6 +2,11 @@
 
 This repository contains a machine learning pipeline for **audio restoration**, designed to enhance the technical and perceptual quality of outputs from the MusicGen generative model.
 
+⚠️ **IMPORTANT** ⚠️
+- The order of the notebooks is as shown below;
+- the 03_Stems_Denoising notebook is only available in the .py version;
+- the 02_Source_Separation notebook is too large to be displayed on GitHub. That's why I've also uploaded a .py version.
+
 ## Pipeline Overview
 
 The pipeline is structured as follows:
